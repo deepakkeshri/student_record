@@ -1,0 +1,44 @@
+<div align="right">
+<%= link_to("HOME", {:controller => 'student', :action => 'menu_student'} )%>
+<%= link_to("BACK", {:controller => 'student',:action => 'home_student'})%>
+ </div>
+
+<div class="Show student">
+	<h2 align="center">Showing Student</h2>
+
+	<table summary="Student Detail" border="1" align="center">
+		<tr>
+			<th>Name</th>
+			<td><%= @student.name%></td>
+		</tr>
+		<tr>
+			<th>Username</th>
+			<td><%= @student.username%></td>
+		</tr>
+		<tr>
+			<th>Class</th>
+			<td><%= @student.cls%></td>
+		</tr>
+		<tr>
+			<th>Section</th>
+			<td><%= @student.section%></td>
+		</tr>
+		<tr>
+			<th>Email Id</th>
+			<td><%= @student.email%></td>
+		</tr>
+		<tr>
+			<th>Mobile</th>
+			<td><%= @student.mobile%></td>
+		</tr>
+		<tr>
+			<th>Created</th>
+			<td><%= @student.created_at%></td>
+		</tr>
+		<tr>
+			<th>Updated</th>
+			<td><%= @student.updated_at%></td>
+		</tr>
+		</table>
+</div>
+

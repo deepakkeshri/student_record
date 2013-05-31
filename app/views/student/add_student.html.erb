@@ -1,0 +1,45 @@
+<div align="right">
+<%= link_to("HOME", {:controller => 'student', :action => 'menu_student'} )%>
+
+<%= link_to("BACK", {:controller => 'student',:action => 'home_student'})%>
+</div>
+<div class="Add student">
+	<h2 align="center">Create Student</h2>
+	
+	<%= form_for(:student, :url => {:action => 'create'}) do |f| %>
+	<table summary="Add student" border="1" align="center">
+		<tr>
+			<th>Name</th>
+			<td><%= f.text_field(:name)%></td>
+		</tr>
+		<tr>
+			<th>Username</th>
+			<td><%= f.text_field(:username)%></td>
+		</tr>
+		<tr>
+			<th>Class</th>
+			<td><%= f.text_field(:cls)%></td>
+		</tr>
+		<tr>
+			<th>Section</th>
+			<td><%= f.text_field(:section)%></td>
+		</tr>
+		<tr>
+			<th>Email Id</th>
+			<td><%= f.text_field(:email)%></td>
+		</tr>
+		<tr>
+			<th>Mobile</th>
+			<td><%= f.text_field(:mobile)%></td>
+		</tr>
+		<tr>
+			<th>password</th>
+			<td><%= f.text_field(:password)%></td>
+		</tr>
+		</table>
+		<div class="form_buttons" align="center">
+			<%= submit_tag("Create Student")%>
+		</div>
+	
+	<% end %>
+</div>

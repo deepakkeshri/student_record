@@ -1,0 +1,14 @@
+<div align="right">
+<%= link_to("HOME", {:controller => 'student',:action => 'menu_student'})%>
+<%= link_to("BACK", {:action => 'home_student'})%>
+</div>
+<div class="Delete student">
+	
+	<%= form_for(:student, :url => {:action => 'destroy', :id => @student.id }) do |f| %>
+	<p align="center">Are you sure you want to delete "<%= @student.name%>"</p>
+	
+	<div align="center">
+		<%= submit_tag("Delete Student")%>
+	</div>
+<%end%>
+</div>
