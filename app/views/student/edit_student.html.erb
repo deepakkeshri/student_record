@@ -9,7 +9,7 @@
 	<h2 align="center" color="blue">Edit Student</h2>
 	
 	<%= form_for(:student, :url => {:action => 'update', :id => @student.id}) do |f| %>
-	<table summary="Edit student" border="1" align="center">
+	<table summary="Edit student" align="center">
 		<tr>
 			<th>Name</th>
 			<td><%= f.text_field(:name)%></td>
@@ -36,7 +36,7 @@
 		</tr>
 		<tr>
 			<th>password</th>
-			<td><%= f.text_field(:password)%></td>
+			<td><%= f.password_field(:password)%></td>
 		</tr>
 		</table>
 		<div class="form_buttons" align="center">
