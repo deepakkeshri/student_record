@@ -1,9 +1,9 @@
 <div align="center">
-<%= link_to("HOME", {:controller => 'student', :action => 'menu_student'} )%> |
-<%= link_to("Add Student", {:action => 'add_student'})%>
+<%= link_to("HOME", {:controller => 'students', :action => 'menu'} )%> |
+<%= link_to("Add Student", {:action => 'add'})%>
 </div>
 </br>
-
+<p>Logged in as </p>
 <table class="listing" summary= "Student data" border="1" align="center">
 	<tr style="background-color:#00ff00">
 		<th>Name</th>
@@ -21,11 +21,18 @@
 		<td><%= student.email %></td>
 		<td><%= student.mobile %></td>
 		<td>
-			<%= link_to("Show", {:action => 'show_student', :id => student.id})%>	
-			<%= link_to("Edit", {:action => 'edit_student', :id => student.id})%>
-			<%= link_to("Delete", {:action => 'delete_student', :id => student.id})%>
+			<%= link_to("Show", {:action => 'show', :id => student.id})%>	
+			<%= link_to("Edit", {:action => 'edit', :id => student.id})%>
+			<%= link_to("Delete", {:action => 'delete', :id => student.id})%>
 		</td>
 	</tr>
 	<% end %>
 </table>
-</html>
+<div>
+<%= form_for(:student, :url => {:action => 'login' }) do |f| %>
+		
+	<div align="center">
+		<%= submit_tag("Log out")%>
+	</div>
+	<% end %>
+</div>

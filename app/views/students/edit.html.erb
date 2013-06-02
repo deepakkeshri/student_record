@@ -1,10 +1,10 @@
 <div align="right">
-<%= link_to("HOME", {:controller => 'student', :action => 'menu_student'} )%>
+<%= link_to("HOME", {:controller => 'students', :action => 'menu'} )%>
 
 
-<%= link_to("BACK", {:controller => 'student',:action => 'home_student'})%>
+<%= link_to("BACK", {:controller => 'students',:action => 'home'})%>
 </div>
-	
+	<p>Logged in as </p>
 <div class="Edit student">
 	<h2 align="center" color="blue">Edit Student</h2>
 	
@@ -43,6 +43,14 @@
 			<%= submit_tag("Save")%>
 		</div>
 	
+	<% end %>
+</div>
+<div>
+	<%= form_for(:student, :url => {:action => 'login' }) do |f| %>
+		
+	<div align="center">
+		<%= submit_tag("Log out")%>
+	</div>
 	<% end %>
 </div>
 

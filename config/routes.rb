@@ -5,7 +5,7 @@ StudentRecord::Application.routes.draw do
 
   #get "public/show"
 
-  root :to => "student#menu_student"
+  root :to => "students#menu"
  # get "student/home_student"
   #get "student/add_student"
  # get "student/edit_student"

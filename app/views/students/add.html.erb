@@ -1,7 +1,8 @@
-<div align="right">
-<%= link_to("HOME", {:controller => 'student', :action => 'menu_student'} )%>
 
-<%= link_to("BACK", {:controller => 'student',:action => 'home_student'})%>
+<div align="right">
+<%= link_to("HOME", {:controller => 'students', :action => 'menu'} )%>
+
+<%= link_to("BACK", {:controller => 'students',:action => 'home'})%>
 </div>
 <div class="Add student">
 	<h2 align="center">Create Student</h2>
@@ -41,5 +42,13 @@
 			<%= submit_tag("Create Student")%>
 		</div>
 	
+	<% end %>
+</div>
+<div>
+<%= form_for(:student, :url => {:action => 'login' }) do |f| %>
+		
+	<div align="center">
+		<%= submit_tag("Log out")%>
+	</div>
 	<% end %>
 </div>

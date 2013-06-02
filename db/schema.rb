@@ -22,6 +22,7 @@ ActiveRecord::Schema.define(:version => 20130530202532) do
     t.string   "email"
     t.integer  "mobile"
     t.string   "password"
+    t.string   "salt"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end

@@ -1,4 +1,4 @@
-class Student < ActiveRecord::Base
+class Students < ActiveRecord::Base
    attr_accessible :name, :username, :cls, :section, :email, :mobile, :password
    
    EMAIL_REGEX = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i
@@ -7,9 +7,9 @@ class Student < ActiveRecord::Base
    validates :cls, :presence => true, :length =>{:maximum => 25}
    validates :section, :presence => true, :length=>{:maximum => 25}
    validates :username, :presence => true, :length=>{:within => 8..25}, :uniqueness => true
-   validates :email, :presence => true, :format => EMAIL_REGEX, :confirmation => true
+   validates :email, :presence => true, :format => EMAIL_REGEX
    validates :mobile, :presence => true, :format => pass, :length =>{:maximum => 10}
-   validates :password, :presence => { :message => "wrong"}, :length=>{:within => 4..25}
+   validates :password, :presence => true, :length=>{:within => 4..25}
      
   
    

@@ -1,9 +1,9 @@
 <div align="right">
-<%= link_to("HOME", {:controller => 'student',:action => 'menu_student'})%>
-<%= link_to("BACK", {:action => 'home_student'})%>
+<%= link_to("HOME", {:controller => 'students',:action => 'menu'})%>
+<%= link_to("BACK", {:action => 'home'})%>
 </div>
 <div class="Delete student">
-	
+	<p>Logged in as </p>
 	<%= form_for(:student, :url => {:action => 'destroy', :id => @student.id }) do |f| %>
 	<p align="center">Are you sure you want to delete "<%= @student.name%>"</p>
 	
@@ -11,4 +11,12 @@
 		<%= submit_tag("Delete Student")%>
 	</div>
 <%end%>
+</div>
+<div>
+<%= form_for(:student, :url => {:action => 'login' }) do |f| %>
+		
+	<div align="center">
+		<%= submit_tag("Log out")%>
+	</div>
+	<% end %>
 </div>

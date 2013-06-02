@@ -8,7 +8,8 @@ class CreateStudents < ActiveRecord::Migration
       t.string "section"
       t.string "email"
       t.integer "mobile"
-      t.string "password", 
+      t.string "password"
+      t.string "salt" 
       t.timestamps
     end
     

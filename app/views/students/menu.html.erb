@@ -1,8 +1,8 @@
 <h1>Welcome</h1>
 <div id="links" style="background-color:#FFA500";text-color:green align="center">
-<%= link_to("HOME", {:controller => 'student', :action => 'menu_student'} )%> |
+<%= link_to("HOME", {:controller => 'students', :action => 'menu'} )%> |
 
-<%= link_to("Student List", {:controller => 'student', :action => 'home_student'} )%>
+<%= link_to("Log in", {:controller => 'students', :action => 'login'} )%>
 </div>
 <div class="img">
 <%= image_tag('Student.jpg') %>
